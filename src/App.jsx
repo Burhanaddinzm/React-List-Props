@@ -27,6 +27,11 @@ function App() {
         title={"All Blogs!"}
         handleDelete={handleDelete}
       />
+      <BlogList
+        blogs={blogs.filter((blog) => blog.author === "mario")}
+        title={"Mario blogs!"}
+        handleDelete={handleDelete}
+      />
     </div>
   );
 }
