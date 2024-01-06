@@ -1,6 +1,8 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 function App() {
+  //Creating list
   const [blogs, setBlog] = useState([
     { title: "My new website", body: "Lorem Ipsum...", author: "mario", id: 1 },
     { title: "Welcome party!", body: "Lorem Ipsum...", author: "yoshi", id: 2 },
@@ -13,14 +15,9 @@ function App() {
   ]);
 
   return (
+    //Passing blogs as a property
     <div className="content">
-      {blogs.map((blog) => (
-        <div className="blog" key={blog.id}>
-          <h2>{blog.title}</h2>
-          <p>{blog.body}</p>
-          <span>{blog.author}</span>
-        </div>
-      ))}
+      <BlogList blogs={blogs} />
     </div>
   );
 }
