@@ -14,10 +14,19 @@ function App() {
     },
   ]);
 
+  const handleDelete = (id) => {
+    const newBlogs = blogs.filter((blog) => blog.id !== id);
+    setBlog(newBlogs);
+  };
+
   return (
-    //Passing blogs as a property
+    //Passing properties
     <div className="content">
-      <BlogList blogs={blogs} />
+      <BlogList
+        blogs={blogs}
+        title={"All Blogs!"}
+        handleDelete={handleDelete}
+      />
     </div>
   );
 }
