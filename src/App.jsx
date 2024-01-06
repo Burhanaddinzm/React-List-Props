@@ -13,17 +13,15 @@ function App() {
   ]);
 
   return (
-    <>
-      <div className="content">
-        {blogs.map((blog) => (
-          <div className="blog" key={blog.id}>
-            <h2>{blog.title}</h2>
-            <p>{blog.body}</p>
-            <span>{blog.author}</span>
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="content">
+      {blogs.map((blog) => (
+        <div className="blog" key={blog.id}>
+          <h2>{blog.title}</h2>
+          <p>{blog.body}</p>
+          <span>{blog.author}</span>
+        </div>
+      ))}
+    </div>
   );
 }
 
